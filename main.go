@@ -6,11 +6,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/portapps/portapps/v2"
-	"github.com/portapps/portapps/v2/pkg/dialog"
-	"github.com/portapps/portapps/v2/pkg/log"
-	"github.com/portapps/portapps/v2/pkg/utl"
-	"github.com/portapps/portapps/v2/pkg/win"
+	"github.com/portapps/portapps/v3"
+	"github.com/portapps/portapps/v3/pkg/log"
+	"github.com/portapps/portapps/v3/pkg/utl"
+	"github.com/portapps/portapps/v3/pkg/win"
 )
 
 var (
@@ -33,10 +32,10 @@ func main() {
 	// Check arch
 	if win.Is64Arch() && utl.Exists(utl.PathJoin(app.AppPath, "x86")) {
 		log.Error().Msg("Emby Theater win32 cannot be launched on win64 system")
-		if _, err := dialog.MsgBox(
+		if _, err := win.MsgBox(
 			fmt.Sprintf("%s portable", app.Name),
 			"Emby Theater win32 cannot be launched on win64 system.",
-			dialog.MsgBoxBtnOk|dialog.MsgBoxIconError); err != nil {
+			win.MsgBoxBtnOk|win.MsgBoxIconError); err != nil {
 			log.Error().Err(err).Msg("Cannot create dialog box")
 		}
 		return
