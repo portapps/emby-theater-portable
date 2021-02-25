@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.14-7 (2021/02/25)
+
+* Emby Theater 3.0.14
+* Portapps 3.2.2
+
 ## 3.0.11-6 (2020/03/13)
 
 * Emby Theater 3.0.11
