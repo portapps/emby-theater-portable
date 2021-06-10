@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.15-8 (2021/03/11)
+
+* Emby Theater 3.0.15
+* Portapps 3.3.0
+* No more win32 release
+
 ## 3.0.14-7 (2021/02/25)
 
 * Emby Theater 3.0.14
